@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nginx:
-    image: nginx:latest
+    image: nginx
     ports:
       - 80:80
     # volumes:
@@ -15,7 +15,7 @@ services:
       - app-network
   
   wp:
-    image: wordpress:latest
+    image: wordpress
     ports:
       - 8080:80
     environment:
@@ -29,7 +29,7 @@ services:
       - app-network
   
   db:
-    image: mysql:latest
+    image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
