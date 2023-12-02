@@ -10,7 +10,7 @@ services:
     #   - ./html:/usr/share/nginx/html
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - wp_files:/var/www/html
+      - wordpress:/var/www/html
     networks:
       - app-network
   
